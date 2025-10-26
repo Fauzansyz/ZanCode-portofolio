@@ -1,161 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portofolio</title>
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <title>Portofolio Fauzan</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Scripts -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  
-  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Skill carousel animation */
+    @keyframes slide-track {
+      0% { transform: translateX(0%); }
+      100% { transform: translateX(-50%); }
+    }
+    .animate-slide-track {
+      display: flex;
+      width: 200%;
+      animation: slide-track 30s linear infinite;
+    }
+  </style>
 </head>
+<body class="bg-gray-900 text-white font-sans overflow-x-hidden">
 
-<body>
-  
-  <div id="container" class="overflow-x-hidden bg-gradient-to-b from-gray-500 to-gray-900 w-full">
-    <nav id="nav" class="bg-transparent fixed top-0 left-0 w-full z-50 text-white transition-colors duration-300">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between h-16">
-          <div class="flex items-center">
-            <span class="text-2xl font-bold text-white font-mono">ZanCode</span>
-          </div>
-          <div class="hidden md:flex space-x-6 items-center font-sans md:px-2">
-            <a href="#home" class="hover:text-indigo-400 transition">Home</a>
-            <a href="#about" class="hover:text-indigo-400 transition">About</a>
-            <a href="#projects" class="hover:text-indigo-400 transition">Projects</a>
-            <a href="#contact" class="hover:text-indigo-400 transition">Contact</a>
-          </div>
-          <!-- Mobile menu button -->
-          <div class="hidden flex items-center">
-            <button id="menuBtn" class="text-white focus:outline-none">
-              <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
-            </button>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Mobile menu -->
-      <div id="mobileMenu" class="hidden md:hidden px-4 pb-4 bg-transparent text-white font-sans">
-        <a href="#home" class="block py-2 hover:text-indigo-400">Home</a>
-        <a href="#about" class="block py-2 hover:text-indigo-400">About</a>
-        <a href="#projects" class="block py-2 hover:text-indigo-400">Projects</a>
-        <a href="#contact" class="block py-2 hover:text-indigo-400">Contact</a>
-      </div>
-    </nav>
-    
-    <!-- Hero Section -->
-    <div id="home" class="w-full h-[150vh] bg-gradient-to-b from-gray-900 to-gray-500 text-white flex items-center pt-16 flex-wrap justify-center">
-      <div class="w-full max-w-screen-lg mx-auto flex flex-col justify-center px-10">
-        <h1 data-aos="fade-up" class="text-3xl md:text-8xl font-bold font-mono mb-4 max-w-xl md:ml-20">
-          Hi!
-        </h1>
-        <p data-aos="fade-left" class="text-lg md:text-5xl font-sans mb-3 max-w-xl ml-8 md:ml-20 md:mt-5">
-          Salken cuy gua <b>Fauzan</b>
-        </p>
-        <p data-aos="fade-right" class="text-lg md:text-3xl font-sans mb-3 max-w-xl ml-0 md:ml-10 md:mt-5">
-          Saya adalah pelajar sekaligus <b class="font-mono">mobile dev</b> dan <b class="font-mono">fullstack web dev</b> yang <br> <br> sedang merintis karir nya di dunia <b>programming</b> sejak tahun 2022
-        </p>
-      </div>
-      <section data-aos="zoom-in" class="px-15 md:px-20 bg-transparent">
-        <div class="max-w-6xl mx-auto px-4">
-          <h2 class="font-mono text-2xl font-semibold mb-6 text-left flex items-center gap-2 md:text-5xl md:mb-20">
-            <i data-lucide="image"></i> My performance
-          </h2>
-          <div class="opacity-50 overflow-x-hidden grid grid-cols-2 md:grid-cols-2 gap-4">
-            <img data-aos="fade-right" id="image1" src="/assets/710815a7-aa94-4383-8d05-425c58d6f292.png" alt="Galeri 1" class="rounded shadow" />
-            <img data-aos="fade-left" id="image2" src="/assets/Screenshot_20250506-184214.jpg" alt="Galeri 2" class="rounded shadow" />
-            <img data-aos="fade-up" id="image3" src="/assets/Screenshot_20250505-192301.jpg" alt="Galeri 3" class="rounded shadow" />
-            <img data-aos="fade-up" id="image4" src="/assets/e8822e4f-f717-4e9f-aa6a-ecacce02849f.png" alt="Galeri 4" class="rounded shadow" />
-            <img data-aos="fade-up" id="image4" src="/assets/9ee0cd9a-f654-4aaa-a492-8b49a9691015.png" alt="Galeri 5" class="rounded shadow" />
-          </div>
-        </div>
-      </section>
+  <!-- Navbar -->
+  <nav class="backdrop-blur fixed top-0 left-0 w-full z-50 bg-transparent px-6 py-4 flex justify-between items-center transition-colors duration-300">
+    <img src="/assets/logo/20251026_104326.png" class="w-20" />
+    <div class="hidden md:flex space-x-6 text-white">
+      <a href="#home" class="hover:text-indigo-400 transition">Home</a>
+      <a href="#about" class="hover:text-indigo-400 transition">About</a>
+      <a href="#projects" class="hover:text-indigo-400 transition">Projects</a>
+      <a href="#contact" class="hover:text-indigo-400 transition">Contact</a>
     </div>
-    
-    <!-- Activity Section -->
-    <div id="about" class="w-full min-h-[100vh] bg-gradient-to-t from-gray-900 to-gray-500 text-white flex flex-col items-center pt-16 md:min-h-[10vh]">
-      <div class="w-full px-5 mt-10 md:w-130 md:max-w-150 md:p-5 md:mt-5">
-        <h2 data-aos="fade-right" class="text-white md:text-5xl font-bold text-3xl font-mono">Project</h2>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="h-screen flex flex-col justify-center items-center bg-gradient-to-b from-gray-900 to-gray-700 text-center px-6 overflow-hidden">
+    <h1 data-aos="fade-up" class="text-5xl md:text-7xl font-bold font-mono mb-4">Hi,I'm Fauzan</h1>
+    <p data-aos="fade-left" class="text-lg md:text-2xl mb-6">Mobile & Fullstack web Developer</p>
+    <a href="#projects" class="bg-indigo-500 hover:bg-indigo-600 py-3 px-6 rounded-lg text-white font-semibold shadow-lg transition-all duration-300">Lihat Projects</a>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="min-h-screen flex flex-col justify-center items-center bg-gradient-to-t from-gray-900 to-gray-700 px-6 py-20 overflow-hidden">
+    <h2 data-aos="fade-right" class="text-4xl md:text-5xl font-bold font-mono mb-6">Siapa Saya ?</h2>
+    <p data-aos="fade-left" class="md:text-xl text-center max-w-3xl">
+      Saya seorang pelajar sekaligus <b class="font-mono">mobile developer</b> & <b class="font-mono"> Fullstack web developer </b> yang senang menciptakan aplikasi fungsional dan keren sejak 2022.
+Dari membuat aplikasi catatan hingga platform interaktif, saya selalu mencari cara untuk memecahkan masalah dengan kode dan belajar teknologi terbaru.
+Saat ini fokus mengembangkan project nyata, sambil mengeksplorasi dunia programming dan berbagi ilmu
+    </p>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="min-h-screen bg-gray-800 py-20 px-6 overflow-hidden">
+    <h2 data-aos="fade-down" class="text-4xl md:text-5xl font-bold font-mono text-center mb-12">Projects</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Project Card -->
+      <div data-aos="fade-up" class="relative rounded-xl overflow-hidden shadow-lg hover:scale-105 transform transition duration-300">
+        <img src="/assets/showcase/Screenshot_20250614-214427.png" class="w-full h-56 object-cover" alt="TulisAja" />
+        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 p-4 flex flex-col justify-end">
+          <h3 class="text-white text-xl font-bold">TulisAja</h3>
+          <p class="text-white text-sm mt-2">Aplikasi catatan mobile dengan fitur canggih...</p>
+        </div>
       </div>
-      
-      <div class="mt-10 p-5 md:p-10 grid grid-cols-1 md:grid-cols-3 gap-8 overflow-hidden">
-        <!-- Card 1 -->
-        <div data-aos="fade-left" class="bg-gradient-to-t from-bg-gray-500 to-bg-gray-900 rounded-xl shadow-md overflow-hidden hover:shadow-lg transform hover:scale-105 transition duration-300">
-          <img class="w-full h-48 object-cover" src="/assets/showcase/Screenshot_20250614-214427.png" alt="TulisAja app" />
-          <div class="p-6">
-            <h2 class="text-xl font-bold text-white mb-2 font-sans">TulisAja</h2>
-            <p class="text-white text-sm mb-4">
-              Adalah aplikasi Catatan berbasis mobile/native android yang mempunyai fitur sebagai berikut...
-            </p>
-            <!--             <a href="#" class="inline-block bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 text-sm font-semibold">
-  Lihat Selengkapnya
-</a> -->
-          </div>
+      <div data-aos="fade-up" class="relative rounded-xl overflow-hidden shadow-lg hover:scale-105 transform transition duration-300">
+        <img src="/assets/showcase/Screenshot_20250313-215159.png" class="w-full h-56 object-cover" alt="Healthy" />
+        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 p-4 flex flex-col justify-end">
+          <h3 class="text-white text-xl font-bold">Healthy</h3>
+          <p class="text-white text-sm mt-2">Memantau & mengoptimalkan penggunaan ponsel user.</p>
         </div>
-        
-        <!-- Card 2 -->
-        <div data-aos="fade-right" class="bg-gradient-to-b from-bg-gray-500 to-bg-gray-900 rounded-xl shadow-md overflow-hidden hover:shadow-lg transform hover:scale-105 transition duration-300 md:bg-gradient-to-t from-bg-gray-500 to-bg-gray-900">
-          <img class="w-full h-48 object-cover" src="/assets/showcase/Screenshot_20250313-215159.png" alt="Healthly" />
-          <div class="p-6">
-            <h2 class="text-xl font-bold text-white mb-2 font-sans">Healthy</h2>
-            <p class="text-white text-sm mb-4">
-              Healthy adalah aplikasi berbasis mobile/native yang memungkinkan user untuk memantau bahkan mengoptimalkan ponsel Mereka</p>
-            <!--             <a href="#" class="inline-block bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 text-sm font-semibold">
-  Lihat Selengkapnya
-</a> -->
-          </div>
-        </div>
-        
-        <!-- Card 3 -->
-        <div data-aos="fade-left" class="bg-gradient-to-t from-bg-gray-500 to-bg-gray-900 rounded-xl shadow-md overflow-hidden hover:shadow-lg transform hover:scale-105 transition duration-300 md:bg-gradient-to-t from-bg-gray-500 to-bg-gray-900">
-          <img class="w-full h-48 object-cover" src="/assets/showcase/2024-12-29 19-53-04 High Res Screenshot.png" alt="Wthr.io app" />
-          <div class="p-6">
-            <h2 class="text-xl font-bold text-white mb-2 font-sans">Wthr.io</h2>
-            <p class="text-white text-sm mb-4">
-              Wthr.io adalah aplikasi berbasis mobile/native android yang memungkinkan user untuk melihat kondisi cuaca di sekitar secara real-time dan presisi
-            </p>
-            <!--             <a href="#" class="inline-block bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 text-sm font-semibold">
-  Lihat Selengkapnya
-</a> -->
-          </div>
+      </div>
+      <div data-aos="fade-up" class="relative rounded-xl overflow-hidden shadow-lg hover:scale-105 transform transition duration-300">
+        <img src="/assets/showcase/2024-12-29 19-53-04 High Res Screenshot.png" class="w-full h-56 object-cover" alt="Wthr.io" />
+        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 p-4 flex flex-col justify-end">
+          <h3 class="text-white text-xl font-bold">Wthr.io</h3>
+          <p class="text-white text-sm mt-2">Menampilkan kondisi cuaca real-time & presisi.</p>
         </div>
       </div>
     </div>
-    <div class="w-full min-h-[100vh] bg-gradient-to-b from-gray-900 to-gray-500 text-white flex flex-col items-center pt-16">
-      <h2 data-aos="fade-down" class="text-white md:text-5xl font-bold text-3xl font-mono">My profile</h2>
-      
-      <div class="w-[90vh] min-h-[10vh] text-white flex">
-        <img class="w-8 h-auto" src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="bg-gray-900 py-16 px-6 overflow-hidden">
+    <h2 data-aos="fade-down" class="text-4xl md:text-5xl font-bold font-mono text-center mb-12">Skills & Tools</h2>
+    <div class="overflow-hidden">
+      <div class="flex animate-slide-track gap-8 max-w-full">
+        <img src="https://cdn.worldvectorlogo.com/logos/kotlin.svg" class="w-12 h-auto hover:scale-125 transition-transform duration-300">
+        <img src="https://cdn.worldvectorlogo.com/logos/github-icon-1.svg" class="w-12 h-auto hover:scale-125 transition-transform duration-300">
+        <img src="https://cdn.worldvectorlogo.com/logos/react-2.svg" class="w-12 h-auto hover:scale-125 transition-transform duration-300">
+        <img src="https://cdn.worldvectorlogo.com/logos/tailwindcss.svg" class="w-12 h-auto hover:scale-125 transition-transform duration-300">
+        <img src="https://cdn.worldvectorlogo.com/logos/nodejs-icon.svg" class="w-12 h-auto hover:scale-125 transition-transform duration-300">
+        <!-- duplicate untuk loop -->
+        <img src="https://cdn.worldvectorlogo.com/logos/kotlin.svg" class="w-12 h-auto hover:scale-125 transition-transform duration-300">
+        <img src="https://cdn.worldvectorlogo.com/logos/github-icon-1.svg" class="w-12 h-auto hover:scale-125 transition-transform duration-300">
+        <img src="https://cdn.worldvectorlogo.com/logos/react-2.svg" class="w-12 h-auto hover:scale-125 transition-transform duration-300">
+        <img src="https://cdn.worldvectorlogo.com/logos/tailwindcss.svg" class="w-12 h-auto hover:scale-125 transition-transform duration-300">
+        <img src="https://cdn.worldvectorlogo.com/logos/nodejs-icon.svg" class="w-12 h-auto hover:scale-125 transition-transform duration-300">
       </div>
     </div>
-    <div class="overflow-hidden whitespace-nowrap w-full bg-transparent py-4">
-      <div class="flex w-[200%] animate-slide-track">
-        <!-- Set 1 -->
-        <div class="flex w-1/2 justify-center gap-x-10 md:justify-evenly md:gap-x-2 grayscale">
-          <img src="https://cdn.worldvectorlogo.com/logos/kotlin.svg" class="w-8 h-auto">
-          <img src="https://cdn.worldvectorlogo.com/logos/github-icon-1.svg" class="w-8 h-auto">
-          <img src="https://cdn.worldvectorlogo.com/logos/react-2.svg" class="w-8 h-auto">
-          <img src="https://cdn.worldvectorlogo.com/logos/tailwindcss.svg" class="w-8 h-auto">
-          <img src="https://cdn.worldvectorlogo.com/logos/nodejs-icon.svg" class="w-8 h-auto">
-        </div>
-        <!-- Set 2 (duplikat persis) -->
-        <div class="flex w-1/2 justify-center gap-x-10 md:justify-evenly md:gap-x-2 filter grayscale">
-          <img src="https://cdn.worldvectorlogo.com/logos/kotlin.svg" class="w-8 h-auto">
-          <img src="https://cdn.worldvectorlogo.com/logos/github-icon-1.svg" class="w-8 h-auto">
-          <img src="https://cdn.worldvectorlogo.com/logos/react-2.svg" class="w-8 h-auto">
-          <img src="https://cdn.worldvectorlogo.com/logos/tailwindcss.svg" class="w-8 h-auto">
-          <img src="https://cdn.worldvectorlogo.com/logos/nodejs-icon.svg" class="w-8 h-auto">
-        </div>
-      </div>
+  </section>
+
+  <!-- Contact / Footer -->
+  <section id="contact" class="bg-gray-800 py-16 px-6 text-center overflow-hidden">
+    <h2 data-aos="fade-down" class="text-4xl md:text-5xl font-bold font-mono mb-6">Kontak</h2>
+    <p data-aos="fade-up" class="mb-6">Terhubung dengan saya melalui sosial media atau email:</p>
+    <div class="flex justify-center gap-6">
+      <a href="https://www.instagram.com/zan.coders"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" class="w-10 h-auto hover:scale-110 transition-transform duration-300"></a>
+      <a href="https://github.com/FauzanSyz"><img src="https://cdn.worldvectorlogo.com/logos/github-icon-1.svg" class="w-10 h-auto hover:scale-110 transition-transform duration-300"></a>
+      <a href="#"><img src="https://cdn.worldvectorlogo.com/logos/linkedin-icon.svg" class="w-10 h-auto hover:scale-110 transition-transform duration-300"></a>
     </div>
-  </div>
+  </section>
+
   <script src="main.js"></script>
-  
 </body>
-
 </html>
